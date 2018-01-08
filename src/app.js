@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {App} from "./app";
+import { Provider } from "react-redux";
+import { App } from "./main";
+import { store } from "./store";
 
 var root = document.createElement("div");
 root.id = "devtool-root";
@@ -9,4 +11,6 @@ document
     .appendChild(root);
 
 ReactDOM.render(
-    <App></App>, document.getElementById("devtool-root"))
+    <Provider store={store}>
+        <App></App>
+    </Provider>, document.getElementById("devtool-root"))

@@ -1,3 +1,3 @@
-import Nav from "./component";
+import { Nav } from "./component";
 
-export {Nav};
+export { Nav };

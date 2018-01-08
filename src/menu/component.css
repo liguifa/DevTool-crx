@@ -1,0 +1,28 @@
+.devtool-menu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.devtool-menu-item{
+    border-radius: 50%;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    background: #000000;
+}
+
+.devtool-menu-one{
+    width: 100px;
+    height: 100px;
+    opacity: 0.2;
+}
+
+.devtool-menu-two{
+    width: 250px;
+    height: 250px;
+    opacity: 0.3;
+}

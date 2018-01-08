@@ -4,4 +4,9 @@
     position: fixed;
     right: 10px;
     bottom: 10px;
+    background-image: url("../images/devtool-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
 }
