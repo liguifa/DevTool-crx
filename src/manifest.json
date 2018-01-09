@@ -1,0 +1,31 @@
+{
+	"name":"文件快搜",
+	"version":"2.0.0",
+	"manifest_version": 2,  
+	"description":"一键文件搜索，在百度搜索时一键支持文件搜索.右键文件搜索，在任意页面选中需要搜索的关键字，右键文件搜索",
+	"browser_action": 
+	{  
+    	"default_icon": "res/icon.png" ,
+    	"default_title": "文件快搜",
+    	"default_popup": "views/popup.html"
+    },
+    "icons":
+    {
+        "16": "res/icon_16.png",             
+        "48": "res/icon_48.png",            
+        "128": "res/icon_128.png"   
+    },
+	"content_scripts": 
+	[{
+    	"matches": ["https://*/*","http://*/*"],
+    	"js": ["script/baidu.js"]
+    }],
+	"permissions": 
+	[
+        "contextMenus"
+    ],
+	"background": 
+	{  
+     	"scripts": ["script/menu.js"]  
+	}  
+}
