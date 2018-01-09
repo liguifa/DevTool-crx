@@ -1,0 +1,10 @@
+.devtool-menu-json{
+    background: url("../images/devtool-menu-json.png") center no-repeat;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-size: contain;
+    margin: auto;
+    margin-top: 5%;
+    cursor: pointer;
+}

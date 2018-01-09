@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "debug": "webpack --config webpack.dev.config.js --progress --hot"
+    "build": "webpack --config webpack.dev.config.js --progress --hot",
+    "debug": "webpack-dev-server --config webpack.dev.config.js --watch"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2"
   },
   "devDependencies": {
@@ -24,6 +26,7 @@
     "file-loader": "^1.1.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
   }
 }

@@ -1,0 +1,70 @@
+.devtool-json{
+    width: 80%;
+    height: 80%;
+    background: #ffffff;
+    /* border:1px solid #e2e2e2; */
+    top:0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    position: fixed;
+    z-index: 997;
+    /* border-radius: 15px; */
+    box-shadow: 1px 1px 15px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.devtool-json-title{
+    background: #393D49;
+    height: 55px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-left: 20px;
+}
+
+.devtool-json-title-img{
+    background: url('../images/devtool-2.png') center no-repeat;
+    background-size: contain;
+    width: 125px;
+    height: 94px;
+    top: -70px;
+    left: calc(50% - 100px);
+    position: absolute;
+}
+
+.devtool-json-title span{
+    font-size: 28px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 55px;
+}
+
+.divtool-json-content{
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.divtool-json-content .textarea{
+    border:1px solid #e2e2e2;
+    flex-grow: 1;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.divtool-json-content-btn{
+    padding-top:10px; 
+    /* height: 30px; */
+}
+
+.divtool-json-content-btn button{
+    height: 40px;
+    width: 78px;
+    border:none;
+    background: #009688;
+    border-radius: 2px;
+    color: #ffffff;
+}

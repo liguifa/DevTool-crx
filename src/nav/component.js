@@ -9,7 +9,7 @@ export class Nav extends React.Component {
 
     render() {
         return (
-            <div className="devtool-nav">
+            <div onClick={(e) => this.props.onClick(e)} className="devtool-nav">
             </div>
         )
     }
