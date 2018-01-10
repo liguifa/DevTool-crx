@@ -1,0 +1,115 @@
+.devtool-mine-content-table{
+    flex-grow: 1;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border:1px solid #e2e2e2;
+}
+
+
+/*滚动条样式开始*/
+.devtool-mine-content-table::-webkit-scrollbar {  
+    width: 14px;  
+    height: 14px;  
+  }  
+    
+  .devtool-mine-content-table::-webkit-scrollbar-track,  
+  .devtool-mine-content-table::-webkit-scrollbar-thumb {  
+    border-radius: 999px;  
+    border: 5px solid transparent;  
+  }  
+    
+  .devtool-mine-content-table::-webkit-scrollbar-track {  
+    box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;  
+  }  
+    
+  .devtool-mine-content-table::-webkit-scrollbar-thumb {  
+    min-height: 20px;  
+    background-clip: content-box;  
+    box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;  
+  }  
+    
+  .devtool-mine-content-table::-webkit-scrollbar-corner {  
+    background: transparent;  
+  } 
+  /*滚动条样式结束*/
+
+.devtool-mine-content-table table{
+    border: 1px solid #e2e2e2;
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+    line-height: 22px;
+    border-collapse: collapse;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    z-index: 996;
+    border-right:none;
+    table-layout:fixed;
+}
+
+.devtool-mine-content-table table thead{
+    height:39px;
+    margin:0px;
+    border-right:1px solid #e2e2e2;
+    background:#f2f2f2;
+     border-right:1px solid #e2e2e2;
+    border-left:1px solid #e2e2e2;
+}
+
+.devtool-mine-content-table table thead tr{
+    background-color: #f2f2f2;
+}
+
+.devtool-mine-content-table table thead tr th{
+    background-color: #f2f2f2;
+    padding: 9px 15px;
+    min-height: 20px;
+    line-height: 20px;
+    border: 1px solid #e2e2e2;
+    border-left:none;
+    font-size: 14px;
+    text-align: left;
+    z-index: 996;
+    cursor:pointer;
+}
+
+.devtool-mine-content-table table tbody tr td{
+    padding: 9px 15px 9px;
+    min-height: 20px;
+    line-height: 20px;
+    border: 1px solid #e2e2e2;
+    border-left:none;
+    font-size: 14px;
+    text-align: left;
+    height: 25%;
+    z-index: 996;
+    height:20px;
+    text-overflow:ellipsis;
+overflow:hidden;
+white-space: nowrap;
+max-height:20px;
+}
+
+.devtool-mine-content-table table thead tr th:first-child{
+    width: 25px;
+}
+
+.devtool-mine-content-table table tbody tr td:first-child{
+    width: 25px;
+}
+
+.devtool-mine-content-btn{
+    padding-top:10px; 
+    /* height: 30px; */
+}
+
+.devtool-mine-content-btn button{
+    height: 40px;
+    width: 78px;
+    border:none;
+    background: #009688;
+    border-radius: 2px;
+    color: #ffffff;
+}

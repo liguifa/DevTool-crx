@@ -4,8 +4,8 @@ import { Menu } from "../menu";
 import * as actions from "./actions";
 import { PropTypes } from "prop-types";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Json } from "../json";
-import { Mine } from "../mine";
+import * as feature from "../feature";
+import { menus } from "./menus";
 import "./component.css";
 
 export class App extends React.Component {
@@ -15,28 +15,7 @@ export class App extends React.Component {
             isShowMenu: false,
             tool: ""
         }
-        this.menus = [
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "MINE", type: "devtool-menu-minetype", url: "devtool-mine" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
-            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
-        ]
+        this.menus = menus;
     }
 
     render() {
@@ -45,7 +24,7 @@ export class App extends React.Component {
             <div>
                 <Nav onClick={(e) => this.showMenu(e)}></Nav>
                 {this.state.isShowMenu ? <Menu onClick={(type) => this.showTool(type)} menus={this.menus}></Menu> : ""}
-                {Tool ? <Tool></Tool> : ""}
+                {Tool ? <Tool onClick={(type) => this.showTool(type)}></Tool> : ""}
             </div>
         )
     }
@@ -69,8 +48,10 @@ export class App extends React.Component {
 
     getShowToolComponent() {
         switch (this.state.tool) {
-            case "devtool-json": return Json;
-            case "devtool-mine": return Mine;
+            case "devtool-json": return feature.Json;
+            case "devtool-mine": return feature.Mine;
+            case "devtool-date": return feature.Date;
+            case "devtool-today": return feature.Today;
             default: return false;
         }
     }

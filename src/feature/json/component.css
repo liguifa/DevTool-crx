@@ -1,0 +1,23 @@
+.textarea{
+    border:1px solid #e2e2e2;
+    flex-grow: 1;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.devtool-json-content-btn{
+    padding-top:10px; 
+    /* height: 30px; */
+}
+
+.devtool-json-content-btn button{
+    height: 40px;
+    width: 78px;
+    border:none;
+    background: #009688;
+    border-radius: 2px;
+    color: #ffffff;
+}
