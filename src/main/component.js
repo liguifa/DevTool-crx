@@ -5,6 +5,7 @@ import * as actions from "./actions";
 import { PropTypes } from "prop-types";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Json } from "../json";
+import { Mine } from "../mine";
 import "./component.css";
 
 export class App extends React.Component {
@@ -15,10 +16,26 @@ export class App extends React.Component {
             tool: ""
         }
         this.menus = [
-            { type: "devtool-menu-json", url: "devtool-json" },
-            [
-                { type: "devtool-menu-minetype", url: "#/json" }
-            ]
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "MINE", type: "devtool-menu-minetype", url: "devtool-mine" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
+            { name: "JSON", type: "devtool-menu-json", url: "devtool-json" },
+            { name: "Mine Type", type: "devtool-menu-minetype", url: "#/json" },
         ]
     }
 
@@ -53,6 +70,7 @@ export class App extends React.Component {
     getShowToolComponent() {
         switch (this.state.tool) {
             case "devtool-json": return Json;
+            case "devtool-mine": return Mine;
             default: return false;
         }
     }

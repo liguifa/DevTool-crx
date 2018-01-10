@@ -22,7 +22,7 @@ export class Json extends React.Component {
                     <span>Json小工具</span>
                 </div>
                 <div className="divtool-json-content">
-                    <div className="textarea" contenteditable="true" ref="input">text
+                    <div className="textarea" contentEditable={true} ref="input">text
                         {jsonData}
                     </div>
                     <div className="divtool-json-content-btn">

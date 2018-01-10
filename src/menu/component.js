@@ -10,16 +10,13 @@ export class Menu extends React.Component {
     render() {
         return (
             <div className="devtool-menu">
-                <div className="devtool-menu-item devtool-menu-one">
-                    <div onClick={(e) => this.props.onClick(this.props.menus[0].url)} className={this.props.menus[0].type}></div>
-                </div>
-                <div className="devtool-menu-item devtool-menu-two">
-                    {
-                        this.props.menus[1].map(item => {
-                            return <div key={item.url} className={item.type}></div>
-                        })
-                    }
-                </div>
+                {
+                    this.props.menus.map(item => {
+                        var color = `#${Math.ceil(Math.random() * 1000000)}`;
+                        console.log(color);
+                        return <div key={item.url} style={{ "background": color }} onClick={(e) => this.props.onClick(item.url)}>{item.name}</div>
+                    })
+                }
             </div>
         )
     }
